@@ -3,35 +3,35 @@ import { Brain, Target, Users, Lightbulb, TrendingUp, Zap } from 'lucide-react';
 
 export default function About() {
   const skills = [
-    { name: 'AI/ML产品策略', level: 95, icon: Brain },
-    { name: '用户体验设计', level: 90, icon: Users },
-    { name: '数据分析洞察', level: 85, icon: TrendingUp },
-    { name: '敏捷开发管理', level: 88, icon: Target },
-    { name: '创新思维', level: 92, icon: Lightbulb },
-    { name: '技术理解', level: 87, icon: Zap },
+    { name: 'AI产品策略设计', level: 98, icon: Brain },
+    { name: 'AIGC应用落地', level: 95, icon: Zap },
+    { name: '数据中台建设', level: 92, icon: TrendingUp },
+    { name: 'Agents工作流设计', level: 90, icon: Target },
+    { name: '跨部门协同管理', level: 88, icon: Users },
+    { name: '创新产品孵化', level: 94, icon: Lightbulb },
   ];
 
   const experiences = [
     {
-      period: '2021-2024',
-      company: 'TechAI 独角兽公司',
+      period: '2022-2024',
+      company: '知名出海公司',
       role: '高级AI产品经理',
-      description: '负责智能推荐系统产品线，用户增长300%，营收提升150%',
-      achievements: ['构建个性化推荐算法产品', '主导多模态AI交互设计', '管理15人跨职能团队'],
+      description: '主导AI营销平台建设，营销获客成本降低80%，线索商机CVR提升40%',
+      achievements: ['从0到1搭建5+个AI应用产品', '构建智能问答、创意素材生成等核心功能', '实现素材产出效率提升12倍'],
     },
     {
-      period: '2019-2021',
-      company: 'DataInsight 科技',
+      period: '2020-2022',
+      company: '海外ToB企业',
       role: 'AI产品经理',
-      description: '从0到1打造智能分析平台，获得行业最佳创新产品奖',
-      achievements: ['设计机器学习工作流', '建立数据产品标准', '实现月活用户10万+'],
+      description: '主导数据赋能中台建设，整合6+业务系统，构建100+核心KPI体系',
+      achievements: ['建设经营分析&责任制体系数据应用产品', '实现7+业务线数据可视预警', '年度节省人工约10000h'],
     },
     {
-      period: '2017-2019',
-      company: 'Innovation Lab',
-      role: '产品分析师',
-      description: '深入研究AI技术应用，为产品决策提供数据支持',
-      achievements: ['完成50+产品分析报告', '建立产品指标体系', '优化转化率35%'],
+      period: '2018-2020',
+      company: '游戏科技公司',
+      role: '产品经理',
+      description: '独立设计3款AI驱动游戏，创新"配方驱动"交互范式',
+      achievements: ['卡牌设计效率从2天提升至4小时', '探索次世代游戏新形态', '构建反转角色RPG、世代传承系统'],
     },
   ];
 
@@ -57,11 +57,11 @@ export default function About() {
             </div>
             <h2 className="text-2xl font-bold text-gradient-cyber">使命愿景</h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              我相信AI技术的真正价值在于<span className="text-primary font-semibold">解决人类的实际问题</span>。
-              作为AI产品经理，我致力于构建既具有技术深度，又贴近用户需求的智能产品。
-              通过<span className="text-accent font-semibold">深度理解算法原理</span>和
-              <span className="text-secondary font-semibold">敏锐洞察用户心理</span>，
-              让复杂的AI技术变得简单易用，真正赋能于人。
+              拥有<span className="text-primary font-semibold">6年+产品专业经验</span>和<span className="text-accent font-semibold">10000h+项目实战经验</span>，
+              持有PMP、NPDP国际认证。作为<span className="text-secondary font-semibold">WaytoAGI社区专栏成员</span>和Prompt设计师，
+              我专注于将复杂的AI技术转化为具有商业价值的产品解决方案。
+              通过AI赋能实现多项业务突破——<span className="text-primary font-semibold">素材产出效率提升12倍</span>、
+              <span className="text-accent font-semibold">培训完课率提升22%</span>、<span className="text-secondary font-semibold">重大风险预警避免损失150万美元</span>。
             </p>
           </div>
         </Card>

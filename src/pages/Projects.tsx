@@ -1,134 +1,154 @@
-import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { 
-  ExternalLink, 
-  Github, 
-  Filter,
-  Brain,
-  BarChart3,
-  Users,
+  Brain, 
+  Sparkles, 
+  Users, 
+  TrendingUp, 
   Zap,
-  TrendingUp,
-  ShoppingCart
+  ArrowRight,
+  ExternalLink,
+  Calendar,
+  Target,
+  BarChart3,
+  Gamepad2
 } from 'lucide-react';
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState('全部');
-
-  const categories = ['全部', 'AI推荐', '数据分析', '用户体验', '商业智能'];
-
   const projects = [
     {
       id: 1,
-      title: '智能内容推荐系统',
-      category: 'AI推荐',
-      description: '基于深度学习的个性化内容推荐平台，提升用户参与度300%，月活用户达到500万+',
-      image: '/api/placeholder/600/400',
-      tech: ['TensorFlow', 'Python', 'Redis', 'Kubernetes'],
-      metrics: [
-        { label: '用户增长', value: '+300%' },
-        { label: '点击率提升', value: '+85%' },
-        { label: '用户停留时间', value: '+120%' }
+      title: 'AI创意素材营销平台',
+      subtitle: '基于Stable Diffusion的营销素材生成平台',
+      description: '从0到1构建营销领域AI素材平台，实现素材产出效率从2人天提升至4小时，CTR提升40%。',
+      category: 'AI营销',
+      period: '2023-2024',
+      status: '已上线',
+      impact: '素材产出效率提升12倍',
+      tech: ['Stable Diffusion', 'Deepbooru', 'Python', 'Vue.js'],
+      achievements: [
+        '用户调研22个市场部门，明确需求痛点',
+        '独立负责平台整体方案设计',
+        '协同算法团队训练高质量生成模型',
+        '内部业务场景覆盖率达50%'
       ],
-      icon: Brain,
-      link: '#',
-      github: '#',
-      featured: true
+      highlights: [
+        { label: '效率提升', value: '12倍' },
+        { label: 'CTR提升', value: '40%' },
+        { label: '业务覆盖', value: '50%' }
+      ]
     },
     {
       id: 2,
-      title: '实时用户行为分析平台',
-      category: '数据分析',
-      description: '构建实时数据处理管道，支持千万级用户行为分析，为产品决策提供数据支持',
-      image: '/api/placeholder/600/400',
-      tech: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js'],
-      metrics: [
-        { label: '数据处理量', value: '10M+/日' },
-        { label: '查询响应时间', value: '<100ms' },
-        { label: '准确率', value: '99.5%' }
+      title: 'AI Agents自动化营销获客系统',
+      subtitle: '基于Coze/n8n的智能获客工作流',
+      description: '构建从对标拆解、内容创作到数据分析的全链路AI获客系统，大幅缩短内容生产周期。',
+      category: 'AI自动化',
+      period: '2023-2024',
+      status: '已嵌入业务',
+      impact: '营销获客成本降低80%',
+      tech: ['Coze', 'n8n', 'GPT-4', 'QuickBI'],
+      achievements: [
+        '穷举15大业务方向，聚焦7个核心场景',
+        '设计智能对标拆解工作流',
+        '构建自动化内容生产链路',
+        '线索商机CVR提升40%'
       ],
-      icon: BarChart3,
-      link: '#',
-      github: '#',
-      featured: false
+      highlights: [
+        { label: '成本降低', value: '80%' },
+        { label: 'CVR提升', value: '40%' },
+        { label: '场景覆盖', value: '7个' }
+      ]
     },
     {
       id: 3,
-      title: 'AI驱动的客户服务系统',
-      category: '用户体验',
-      description: '集成NLP和机器学习技术的智能客服系统，自动化处理80%的客户咨询',
-      image: '/api/placeholder/600/400',
-      tech: ['GPT-4', 'Node.js', 'MongoDB', 'WebSocket'],
-      metrics: [
-        { label: '自动化率', value: '80%' },
-        { label: '响应时间', value: '<3s' },
-        { label: '满意度', value: '96%' }
+      title: 'Gemini"配方驱动"AI创意工具',
+      subtitle: '光影魔方·PixelShift创意平台',
+      description: '基于Gemini 2.5图像能力，创新"配方驱动"交互范式，降低95%用户使用门槛。',
+      category: 'AI创意',
+      period: '2024',
+      status: '产品化中',
+      impact: '用户门槛降低95%',
+      tech: ['Gemini 2.5', 'React', 'Python', 'WebGL'],
+      achievements: [
+        '独立设计差异化AI创意工具',
+        '创建预设变换配方产品架构',
+        '设计迭代式创作工作流',
+        '抽象高级AI能力为可视化操作'
       ],
-      icon: Users,
-      link: '#',
-      github: '#',
-      featured: true
+      highlights: [
+        { label: '门槛降低', value: '95%' },
+        { label: '交互创新', value: '配方驱动' },
+        { label: '创作效率', value: '4小时' }
+      ]
     },
     {
       id: 4,
-      title: '智能营销ROI预测模型',
-      category: '商业智能',
-      description: '利用机器学习预测营销活动效果，优化广告投放策略，ROI提升150%',
-      image: '/api/placeholder/600/400',
-      tech: ['Scikit-learn', 'PostgreSQL', 'FastAPI', 'Docker'],
-      metrics: [
-        { label: 'ROI提升', value: '+150%' },
-        { label: '预测准确率', value: '92%' },
-        { label: '成本节约', value: '30%' }
+      title: '海外ToB数据赋能中台',
+      subtitle: '经营分析&责任制体系数据应用',
+      description: '整合6+业务系统，构建100+核心KPI体系，实现7+业务线数据可视预警。',
+      category: '数据中台',
+      period: '2022-2023',
+      status: '已上线',
+      impact: '年度节省人工10000h',
+      tech: ['Apache Spark', 'Elasticsearch', 'Grafana', 'Python'],
+      achievements: [
+        '整合6+业务系统数据',
+        '构建100+核心KPI指标体系',
+        '建设经营分析数据产品',
+        '实现实时数据可视预警'
       ],
-      icon: TrendingUp,
-      link: '#',
-      github: '#',
-      featured: false
+      highlights: [
+        { label: '系统整合', value: '6+个' },
+        { label: 'KPI体系', value: '100+' },
+        { label: '节省人工', value: '10000h' }
+      ]
     },
     {
       id: 5,
-      title: '多模态搜索引擎',
-      category: 'AI推荐',
-      description: '支持文本、图像、语音的多模态搜索系统，为电商平台提供智能搜索体验',
-      image: '/api/placeholder/600/400',
-      tech: ['CLIP', 'Elasticsearch', 'Vue.js', 'AWS'],
-      metrics: [
-        { label: '搜索准确率', value: '94%' },
-        { label: '转化率提升', value: '+65%' },
-        { label: '响应时间', value: '<200ms' }
+      title: 'AI驱动游戏创新项目',
+      subtitle: '反转角色RPG & TCG卡牌生成器',
+      description: '独立设计3款AI驱动游戏，探索"配方驱动"交互范式，卡牌设计效率提升至4小时。',
+      category: 'AI游戏',
+      period: '2021-2022',
+      status: '创新探索',
+      impact: '设计效率从2天到4小时',
+      tech: ['Unity', 'TensorFlow', 'GPT-3', 'Stable Diffusion'],
+      achievements: [
+        '设计反转角色RPG游戏机制',
+        '构建世代传承系统',
+        '开发TCG卡牌自动生成器',
+        '探索次世代游戏新形态'
       ],
-      icon: Zap,
-      link: '#',
-      github: '#',
-      featured: false
-    },
-    {
-      id: 6,
-      title: '智能供应链优化平台',
-      category: '商业智能',
-      description: '基于AI的供应链管理系统，优化库存管理和物流配送，降低成本25%',
-      image: '/api/placeholder/600/400',
-      tech: ['PyTorch', 'Django', 'Celery', 'GCP'],
-      metrics: [
-        { label: '成本降低', value: '25%' },
-        { label: '库存周转率', value: '+40%' },
-        { label: '配送时效', value: '+35%' }
-      ],
-      icon: ShoppingCart,
-      link: '#',
-      github: '#',
-      featured: true
+      highlights: [
+        { label: '效率提升', value: '12倍' },
+        { label: '游戏创新', value: '3款' },
+        { label: '交互范式', value: '配方驱动' }
+      ]
     }
   ];
 
-  const filteredProjects = selectedCategory === '全部' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case '已上线': return 'bg-green-500/20 text-green-400 border-green-500/30';
+      case '已嵌入业务': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+      case '产品化中': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+      case '创新探索': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
+      default: return 'bg-muted/20 text-muted-foreground border-muted/30';
+    }
+  };
 
-  const featuredProjects = projects.filter(project => project.featured);
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI营销': return Brain;
+      case 'AI自动化': return Zap;
+      case 'AI创意': return Sparkles;
+      case '数据中台': return BarChart3;
+      case 'AI游戏': return Gamepad2;
+      default: return Target;
+    }
+  };
 
   return (
     <div className="min-h-screen pt-20 pb-12">
@@ -137,178 +157,160 @@ export default function Projects() {
         {/* Header */}
         <div className="text-center space-y-4 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold">
-            <span className="text-gradient-cyber">项目作品</span>
+            <span className="text-gradient-cyber">项目作品集</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            展示我在AI产品管理领域的实战经验和创新成果
+            从0到1构建多个AI产品，实现技术创新与商业价值的完美结合
           </p>
         </div>
 
-        {/* Featured Projects */}
-        <div className="space-y-8 animate-fade-in">
-          <h2 className="text-3xl font-bold text-center">
-            <span className="text-gradient-cyber">精选项目</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredProjects.slice(0, 2).map((project) => {
-              const Icon = project.icon;
-              return (
-                <Card key={project.id} className="glass-effect border-primary/30 overflow-hidden group hover:scale-105 transition-all duration-300 glow-cyber">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className="w-16 h-16 text-primary/50" />
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-accent text-accent-foreground">精选</Badge>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 space-y-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground mt-2 leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-3 gap-4 py-4 border-y border-primary/20">
-                      {project.metrics.map((metric, i) => (
-                        <div key={i} className="text-center">
-                          <div className="text-lg font-bold text-primary">{metric.value}</div>
-                          <div className="text-xs text-muted-foreground">{metric.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, i) => (
-                        <Badge key={i} variant="outline" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    
-                    <div className="flex gap-2 pt-2">
-                      <Button variant="cyber" size="sm" className="flex-1">
-                        <ExternalLink className="w-4 h-4" />
-                        查看详情
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Github className="w-4 h-4" />
-                      </Button>
-                    </div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+        {/* Stats Overview */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in">
+          <Card className="glass-effect p-6 border-primary/30 text-center">
+            <div className="text-3xl font-bold text-gradient-cyber mb-2">5+</div>
+            <div className="text-sm text-muted-foreground">AI应用产品</div>
+          </Card>
+          <Card className="glass-effect p-6 border-primary/30 text-center">
+            <div className="text-3xl font-bold text-gradient-cyber mb-2">80%</div>
+            <div className="text-sm text-muted-foreground">获客成本降低</div>
+          </Card>
+          <Card className="glass-effect p-6 border-primary/30 text-center">
+            <div className="text-3xl font-bold text-gradient-cyber mb-2">12×</div>
+            <div className="text-sm text-muted-foreground">效率提升</div>
+          </Card>
+          <Card className="glass-effect p-6 border-primary/30 text-center">
+            <div className="text-3xl font-bold text-gradient-cyber mb-2">10K+</div>
+            <div className="text-sm text-muted-foreground">节省工时</div>
+          </Card>
         </div>
 
-        {/* Filter & All Projects */}
-        <div className="space-y-8 animate-fade-in">
-          {/* Category Filter */}
-          <div className="flex items-center justify-center gap-4 flex-wrap">
-            <Filter className="w-5 h-5 text-muted-foreground" />
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? 'cyber' : 'ghost'}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className="text-sm"
+        {/* Projects Grid */}
+        <div className="space-y-12 animate-fade-in">
+          {projects.map((project, index) => {
+            const CategoryIcon = getCategoryIcon(project.category);
+            return (
+              <Card 
+                key={project.id}
+                className={`glass-effect border-primary/30 overflow-hidden hover:scale-[1.02] transition-all duration-300 ${
+                  index % 2 === 0 ? 'hover:glow-primary' : 'hover:glow-secondary'
+                }`}
               >
-                {category}
-              </Button>
-            ))}
-          </div>
-
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => {
-              const Icon = project.icon;
-              return (
-                <Card key={project.id} className="glass-effect border-primary/30 overflow-hidden group hover:scale-105 transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className="w-12 h-12 text-primary/40" />
-                    </div>
-                    {project.featured && (
-                      <div className="absolute top-3 left-3">
-                        <Badge className="bg-accent text-accent-foreground text-xs">精选</Badge>
-                      </div>
-                    )}
-                    <div className="absolute top-3 right-3">
-                      <Badge variant="outline" className="text-xs">{project.category}</Badge>
-                    </div>
-                  </div>
-                  
-                  <div className="p-5 space-y-4">
-                    <div>
-                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mt-2 leading-relaxed line-clamp-3">
-                        {project.description}
-                      </p>
-                    </div>
+                <div className="p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     
-                    <div className="grid grid-cols-3 gap-2 py-3 border-y border-primary/20">
-                      {project.metrics.slice(0, 3).map((metric, i) => (
-                        <div key={i} className="text-center">
-                          <div className="text-sm font-bold text-primary">{metric.value}</div>
-                          <div className="text-xs text-muted-foreground">{metric.label}</div>
+                    {/* Project Info */}
+                    <div className="lg:col-span-2 space-y-6">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-4 flex-wrap">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 gradient-cyber rounded-lg flex items-center justify-center">
+                              <CategoryIcon className="w-5 h-5 text-foreground" />
+                            </div>
+                            <div>
+                              <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+                              <p className="text-sm text-muted-foreground">{project.subtitle}</p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 ml-auto">
+                            <Badge variant="secondary" className={getStatusColor(project.status)}>
+                              {project.status}
+                            </Badge>
+                            <Badge variant="outline" className="text-accent border-accent/30">
+                              {project.category}
+                            </Badge>
+                          </div>
                         </div>
-                      ))}
+                        
+                        <p className="text-muted-foreground leading-relaxed text-lg">
+                          {project.description}
+                        </p>
+                      </div>
+
+                      {/* Achievements */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-secondary flex items-center gap-2">
+                          <Target className="w-4 h-4" />
+                          核心成就
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {project.achievements.map((achievement, i) => (
+                            <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                              {achievement}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Tech Stack */}
+                      <div className="space-y-3">
+                        <h4 className="text-sm font-semibold text-secondary flex items-center gap-2">
+                          <Zap className="w-4 h-4" />
+                          技术栈
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech, i) => (
+                            <Badge key={i} variant="outline" className="text-xs">
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    
-                    <div className="flex flex-wrap gap-1">
-                      {project.tech.slice(0, 3).map((tech, i) => (
-                        <Badge key={i} variant="outline" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.tech.length > 3 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{project.tech.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                    
-                    <div className="flex gap-2">
-                      <Button variant="cyber" size="sm" className="flex-1 text-xs">
-                        <ExternalLink className="w-3 h-3" />
-                        详情
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Github className="w-3 h-3" />
+
+                    {/* Project Stats & Actions */}
+                    <div className="space-y-6">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Calendar className="w-4 h-4" />
+                          {project.period}
+                        </div>
+                        <div className="p-4 glass-effect rounded-lg border border-primary/20">
+                          <div className="text-sm text-muted-foreground mb-2">核心影响</div>
+                          <div className="text-lg font-bold text-gradient-cyber">
+                            {project.impact}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Highlights */}
+                      <div className="space-y-3">
+                        {project.highlights.map((highlight, i) => (
+                          <div key={i} className="flex items-center justify-between p-3 glass-effect rounded-lg border border-primary/10">
+                            <span className="text-sm text-muted-foreground">{highlight.label}</span>
+                            <span className="text-sm font-bold text-primary">{highlight.value}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <Button variant="cyber" className="w-full group">
+                        查看详情
+                        <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </Button>
                     </div>
                   </div>
-                </Card>
-              );
-            })}
-          </div>
+                </div>
+              </Card>
+            );
+          })}
         </div>
 
         {/* CTA Section */}
         <Card className="glass-effect p-8 md:p-12 border-primary/30 text-center animate-fade-in">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
-              <span className="text-gradient-cyber">让我们合作</span>
+              <span className="text-gradient-cyber">一起探索AI的无限可能</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              对我的项目感兴趣？让我们一起探讨如何为您的产品创造价值
+              如果您对这些项目感兴趣，或者有想要讨论的AI产品创意，欢迎与我交流
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" className="group">
-                开始项目合作
-                <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                联系合作
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="glass" size="lg">
-                下载项目详情
+                下载简历
               </Button>
             </div>
           </div>
