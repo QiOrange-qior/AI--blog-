@@ -70,10 +70,11 @@ export const HeroSection = () => {
             <span className="text-gradient-cyber">Manager</span>
           </h1>
           
-           <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-             <span className="text-accent font-semibold">6年+产品经验</span>·<span className="text-secondary font-semibold">10000h+项目实战</span>·<span className="text-primary font-semibold">PMP/NPDP认证</span>
-             <br />从0到1构建AI产品生态，让智能技术真正赋能商业价值
-           </p>
+          <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            连接 <span className="text-primary font-semibold">AI技术</span> 与{' '}
+            <span className="text-accent font-semibold">人类需求</span>，
+            构建未来产品生态
+          </p>
         </div>
 
         {/* Info Card */}
@@ -88,11 +89,11 @@ export const HeroSection = () => {
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 专业背景
               </h3>
-               <p className="text-muted-foreground leading-relaxed">
-                 WaytoAGI社区专栏成员 • Prompt设计师 • 主导5+个AI应用产品落地
-                 <br />
-                 营销获客成本降低80% • 素材产出效率提升12倍 • 避免损失150万美元
-               </p>
+              <p className="text-muted-foreground leading-relaxed">
+                5年+ AI产品经验 • 深度学习算法理解 • 用户体验设计 • 敏捷开发实践
+                <br />
+                致力于让AI技术真正服务于人类生活的改善与创新
+              </p>
             </div>
           </div>
         </Card>
