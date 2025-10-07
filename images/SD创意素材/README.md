@@ -1,4 +1,7 @@
 ## 项目主图
+<img width="1024" height="1024" alt="Gemini_Generated_Image_2m43jl2m43jl2m43" src="https://github.com/user-attachments/assets/8f44110c-29ab-4fb1-aac5-606088b7da16" />
+
+
 ![image (1)](https://github.com/user-attachments/assets/47b54459-5d5f-4bf1-a893-6968a7294dbf)
 
 ## 项目地址
